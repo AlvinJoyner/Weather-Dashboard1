@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Search section -->
+    <aside id="search">
+        <div>
+            <h2>Search for a city:</h2>
+            <!-- City search form -->
+            <form id="city-search-form" class="">
+                <label class="form-label" for="city-search-term">City</label>
+                <input name="city-search-term" id="city-search-term" type="text" autofocus="true" class="form-input" />
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+        <div class="search-history">
+            <!-- Placeholder for search history (not currently implemented) -->
+        </div>
+    </aside>
+
+    <!-- Selected city section -->
+    <main id="selected-city">
+        <div>
+            <!-- City name and current date will be displayed here -->
+            <h2 id="city"></h2>
+            <h2 id="current-date"></h2>
+            <!-- Weather icon will be displayed here -->
+            <img id="icon" src="" alt="">
+        </div>
+        <!-- Weather details (temperature, humidity, wind speed, and UV index) will be displayed here -->
+        <h3>Temperature: <span id="temp"></span> &#176; F</h3>
+        <h3>Humidity: <span id="humidity"></span>%</h3>
+        <h3>Wind Speed: <span id="wind-speed"></span> Mph</h3>
+        <h3>UV Index: <span id="uv-index"></span></h3>
+    </main>
+
+    <!-- 5-Day Forecast section -->
+    <section id="forecast">
+        <h2>5-Day Forecast:</h2>
+
+        <!-- Forecast cards for each of the five days -->
+        <div class="card" id="day1">
+            <h3><span id="day1-date"> </span></h3>
+            <span id="day1-img" class="5day-icon" src="" alt=""></span>
+            <h3>Temp: <span id="day1-temp"></span></h3>
+            <h3>Humidity: <span id="day1-humidity"></span></h3>
+        </div>
+
+        <div class="card" id="day2">
+            <h3 id="day2-date"></h3>
+            <span id="day2-img" class="5day-icon" src="" alt=""></span>
+            <h3>Temp: <span id="day2-temp"></span></h3>
+            <h3>Humidity: <span id="day2-humidity"></span></h3>
+        </div>
+
+        <div class="card" id="day3">
+            <h3 id="day3-date"></h3>
+            <span id="day3-img" class="5day-icon" src="" alt=""></span>
+            <h3>Temp: <span id="day3-temp"></span></h3>
+            <h3>Humidity: <span id="day3-humidity"></span></h3>
+        </div>
+
+        <div class="card" id="day4">
+            <h3 id="day4-date"></h3>
+            <span id="day4-img" class="5day-icon" src="" alt=""></span>
+            <h3>Temp: <span id="day4-temp"></span></h3>
+            <h3>Humidity: <span id="day4-humidity"></span></h3>
+        </div>
+
+        <div class="card" id="day5">
+            <h3 id="day5-date"></h3>
+            <span id="day5-img" class="5day-icon" src="" alt=""></span>
+            <h3>Temp: <span id="day5-temp"></span></h3>
+            <h3>Humidity: <span id="day5-humidity"></span></h3>
+        </div>
+    </section>
+
+    <!-- JavaScript file to handle API calls and update weather data -->
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
